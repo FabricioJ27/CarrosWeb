@@ -1,11 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=}, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DarckCar</title>
+  <link rel="stylesheet" href="style.css">
+  <link real="icon" type="image/x-icon" href="img/favicon.png">
 </head>
 <body>
-    <h1>Hola mundo</h1>
+  <div class="container">
+    <!-- Barra lateral -->
+    <nav class="sidebar">
+      <div class="logo">
+        <h2>DarckCar</h2>
+      </div>
+      <ul class="menu">
+        <li><a href="#" class="active">Inicio</a></li>
+        <li><a href="#">Vehículos</a></li>
+        <li><a href="#">Seminuevos</a></li>
+        <li><a href="#">Concesionarios</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Historias</a></li>
+        <li><a href="#" class="cotizador">Cotizador Virtual</a></li>
+      </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+      <header class="header">
+        <h3>Renueva las reglas</h3>
+      </header>
+
+      <!-- Sección principal -->
+      <section class="hero">
+        <div class="info">
+          <h1> Ferrari F80 😎</h1>
+          <p>Compacto, moderno y versátil. El Ferrari F80 es ideal para moverte con estilo y comodidad por la ciudad.</p>
+          <p class="bold">¡Ven y experimenta su espíritu urbano!</p>
+          <button>Más info</button>
+        </div>
+        <div class="image">
+          <img src="img/Ferrari.png" alt="Ferrari F80">
+        </div>
+      </section>
+
+      <!-- NUEVA SECCIÓN: Recién Llegados -->
+      <section class="nuevos">
+        <div class="nuevos-header">
+          <h2><span>*</span> Recién Llegados</h2>
+          <button class="ver-todos">Ver todos</button>
+        </div>
+
+        <div class="vehiculos">
+          <div class="card">
+            <img src="img/delorean.png" alt="DeLorean DMC-12">
+            <span class="nuevo">Nuevo</span>
+            <h3>DeLorean DMC-12</h3>
+            <p>Delorean &lt; good</p>
+          </div>
+
+          <div class="card">
+            <img src="img/bugatti.png" alt="bugatti chiron">
+            <span class="nuevo">Nuevo</span>
+            <h3>Bugatti</h3>
+            <p>SM</p>
+          </div>
+
+          <div class="card">
+            <img src="img/mercedes.png" alt="Meercedes benz">
+            <span class="nuevo">Nuevo</span>
+            <h3>Mercedez</h3>
+            <p>Mercedez &lt; Benz</p>
+          </div>
+
+          <div class="card">
+            <img src="img/aveo.png" alt="Aveo">
+            <span class="nuevo">Nuevo</span>
+            <h3>Aveo Family</h3>
+            <p>Chevrolet &lt; Good</p>
+          </div>
+        </div>
+
+        <!-- Marcas -->
+        <div class="marcas">
+          <p><strong>NUESTRAS MARCAS:</strong></p>
+          <div class="logos">
+            <img src="img/lambo.png" alt="lamborghini">
+            <img src="img/logomercedez.png" alt="logomercedez">
+            <img src="img/bugatilogosi.png" alt="logobugatti">
+            <img src="img/ferrarilogo.png" alt="ferrarilogo">
+            <img src="img/Chevrolet-logo.png" alt="Chevrolet-logo">
+            <img src="img/Toyota-logo.png" alt="Toyota-logo">
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>

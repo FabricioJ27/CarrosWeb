@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ----- Barra lateral ----- */
+.sidebar {
+  width: 220px;
+  background-color: #d8232a;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  position: fixed;
+  height: 100vh;
+}
+
+.logo {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0 10px;
+}
+
+.menu li {
+  margin: 10px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.menu a:hover, .menu a.active {
+  background-color: #b31b21;
+}
+
+.cotizador {
+  background-color: #000;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* ----- Contenido principal ----- */
+.main-content {
+  margin-left: 220px;
+  flex: 1;
+  background: linear-gradient(to bottom right, #222, #333);
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.header {
+  background-color: #111;
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  gap: 20px;
+}
+
+.info {
+  flex: 1;
+  max-width: 50%;
+}
+
+.info h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+.info .bold {
+  font-weight: bold;
+  color: #fff;
+}
+
+button {
+  background-color: #fff;
+  color: #d8232a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #d8232a;
+  color: #fff;
+}
+
+.image img {
+  width: 550px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* ----- Sección Recién Llegados ----- */
+.nuevos {
+  background-color: #f0f0f0;
+  color: #111;
+  padding: 40px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.nuevos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.nuevos-header h2 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.nuevos-header h2 span {
+  color: #d8232a;
+  font-size: 30px;
+}
+
+.ver-todos {
+  border: 2px solid #d8232a;
+  background: none;
+  color: #d8232a;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ver-todos:hover {
+  background-color: #d8232a;
+  color: #fff;
+}
+
+/* Vehículos */
+.vehiculos {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  width: 220px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card .nuevo {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #d8232a;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.card h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card p {
+  color: gray;
+  font-size: 14px;
+}
+
+/* Marcas */
+.marcas {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.marcas p {
+  font-style: italic;
+  color: #d8232a;
+  font-weight: bold;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.logos img {
+  width: 80px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.logos img:hover {
+  opacity: 1;
+}
