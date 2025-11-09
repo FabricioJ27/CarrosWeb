@@ -1,171 +1,169 @@
+/* ======== ESTILO GENERAL ======== */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: #111;
   color: #fff;
-}
-
-.container {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
   min-height: 100vh;
 }
 
-/* ----- Barra lateral ----- */
-.sidebar {
-  width: 220px;
-  background-color: #d8232a;
+/* ======== CONTENEDOR PRINCIPAL ======== */
+.container {
   display: flex;
-  flex-direction: column;
-  padding: 20px 0;
+  width: 100%;
+  max-width: 1400px;
+}
+
+/* ======== SIDEBAR ======== */
+.sidebar {
+  width: 250px;
+  background-color: #1a1a1a;
+  padding: 30px 20px;
+  border-right: 3px solid #d8232a;
   position: fixed;
   height: 100vh;
 }
 
-.logo {
+.sidebar .logo h2 {
+  color: #d8232a;
   text-align: center;
   font-size: 28px;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
-.menu {
+.sidebar ul {
   list-style: none;
-  padding: 0 10px;
 }
 
-.menu li {
-  margin: 10px 0;
+.sidebar ul li {
+  margin-bottom: 18px;
 }
 
-.menu a {
+.sidebar ul li a {
   text-decoration: none;
-  color: #fff;
+  color: #ccc;
   display: block;
-  padding: 10px;
+  padding: 10px 15px;
   border-radius: 8px;
-  transition: background 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.menu a:hover, .menu a.active {
-  background-color: #b31b21;
-}
-
-.cotizador {
-  background-color: #000;
-  text-align: center;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-
-/* ----- Contenido principal ----- */
-.main-content {
-  margin-left: 220px;
-  flex: 1;
-  background: linear-gradient(to bottom right, #222, #333);
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-}
-
-.header {
-  background-color: #111;
-  text-align: center;
-  padding: 15px;
-  font-size: 16px;
-  letter-spacing: 1px;
-}
-
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  gap: 20px;
-}
-
-.info {
-  flex: 1;
-  max-width: 50%;
-}
-
-.info h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.info p {
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: #ddd;
-}
-
-.info .bold {
-  font-weight: bold;
-  color: #fff;
-}
-
-button {
-  background-color: #fff;
-  color: #d8232a;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.3s;
-}
-
-button:hover {
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
   background-color: #d8232a;
   color: #fff;
 }
 
-.image img {
-  width: 550px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+.sidebar ul li a.cotizador {
+  margin-top: 30px;
+  background-color: #fff;
+  color: #d8232a;
+  font-weight: bold;
+  text-align: center;
 }
 
-/* ----- Sección Recién Llegados ----- */
-.nuevos {
-  background-color: #f0f0f0;
-  color: #111;
+/* ======== MAIN CONTENT ======== */
+.main-content {
+  margin-left: 270px;
+  flex: 1;
   padding: 40px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+}
+
+.header h3 {
+  font-size: 20px;
+  color: #d8232a;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+/* ======== HERO ======== */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(216, 35, 42, 0.3);
+}
+
+.hero .info {
+  flex: 1;
+  margin-right: 40px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.hero p.bold {
+  color: #fff;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.hero button {
+  background-color: #d8232a;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero button:hover {
+  background-color: #b31b21;
+}
+
+.hero .image img {
+  max-width: 450px;
+}
+
+/* ======== NUEVOS VEHÍCULOS ======== */
+.nuevos {
+  margin-top: 50px;
 }
 
 .nuevos-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .nuevos-header h2 {
-  font-size: 26px;
-  font-weight: 700;
+  font-size: 24px;
 }
 
 .nuevos-header h2 span {
   color: #d8232a;
-  font-size: 30px;
 }
 
 .ver-todos {
-  border: 2px solid #d8232a;
-  background: none;
+  background-color: transparent;
+  border: 1px solid #d8232a;
   color: #d8232a;
   padding: 8px 16px;
   border-radius: 8px;
-  font-weight: bold;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .ver-todos:hover {
@@ -173,22 +171,19 @@ button:hover {
   color: #fff;
 }
 
-/* Vehículos */
 .vehiculos {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 20px;
-  justify-content: space-around;
-  flex-wrap: wrap;
 }
 
 .card {
-  background: #fff;
-  border-radius: 16px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
   padding: 20px;
   text-align: center;
-  width: 220px;
+  box-shadow: 0 0 10px rgba(216, 35, 42, 0.2);
   position: relative;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s;
 }
 
@@ -197,43 +192,39 @@ button:hover {
 }
 
 .card img {
-  width: 100%;
+  max-width: 100%;
   border-radius: 10px;
 }
 
-.card .nuevo {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background-color: #d8232a;
-  color: #fff;
-  font-size: 12px;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
 .card h3 {
+  color: #fff;
   margin-top: 10px;
-  font-size: 18px;
-  font-weight: bold;
 }
 
 .card p {
-  color: gray;
-  font-size: 14px;
+  color: #aaa;
 }
 
-/* Marcas */
+.nuevo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #d8232a;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+/* ======== MARCAS ======== */
 .marcas {
+  margin-top: 50px;
   text-align: center;
-  margin-top: 40px;
 }
 
 .marcas p {
-  font-style: italic;
-  color: #d8232a;
-  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .logos {
@@ -242,15 +233,111 @@ button:hover {
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
-  margin-top: 20px;
 }
 
 .logos img {
   width: 80px;
-  opacity: 0.8;
-  transition: opacity 0.3s;
+  filter: grayscale(100%);
+  transition: 0.3s;
 }
 
 .logos img:hover {
-  opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+/* ======== FORMULARIO ======== */
+.formulario-contacto {
+  background-color: #1b1b1b;
+  color: #f5f5f5;
+  padding: 50px;
+  border-radius: 16px;
+  margin-top: 60px;
+  box-shadow: 0 0 20px rgba(216, 35, 42, 0.3);
+  border-top: 4px solid #d8232a;
+}
+
+.formulario-contacto h2 {
+  color: #d8232a;
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.formulario-contacto p {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+/* Grupos */
+.form-grupo {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-grupo label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
+  background-color: #f32020;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: #f5f5f5;
+  padding: 10px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+  border-color: #d8232a;
+  outline: none;
+  box-shadow: 0 0 6px rgba(216, 35, 42, 0.5);
+}
+
+/* Radios y Rango */
+.form-grupo-radio {
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.form-grupo-radio p {
+  margin-bottom: 5px;
+}
+
+.form-grupo-radio label {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #d8232a;
+}
+
+/* Botón de envío */
+.boton-enviar {
+  display: block;
+  margin: 0 auto;
+  background-color: #d8232a;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.boton-enviar:hover {
+  background-color: #b31b21;
+  transform: scale(1.05);
 }
