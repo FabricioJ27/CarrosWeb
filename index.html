@@ -6,85 +6,103 @@
   <title>DarckCar</title>
   <link rel="stylesheet" >
   <link rel="icon" type="image/x-icon" href="img/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-  <div class="container">
+  <div >
     <!-- Barra lateral -->
-    <nav class="sidebar">
-      <div class="logo">
+<div class="container">
+  <nav >
+      <div >
         <h2>DarckCar</h2>
       </div>
-      <ul class="menu">
-        <li><a href="#" class="active">Inicio</a></li>
+      <ul >
+        <li><a href="#" >Inicio</a></li>
         <li><a href="#">Vehículos</a></li>
         <li><a href="#">Seminuevos</a></li>
         <li><a href="#">Concesionarios</a></li>
         <li><a href="#">Servicios</a></li>
         <li><a href="#">Historias</a></li>
         <li><a href="#formulario-compra">Formulario</a></li>
-        <li><a href="#" class="cotizador">Cotizador Virtual</a></li>
+        <li><a href="#" >Cotizador Virtual</a></li>
       </ul>
     </nav>
+  
+</div>
+
+<nav class="nav flex-column">
+  <div >
+        <h2>DarckCar</h2>
+      </div>
+  <a class="nav-link" href="#">Inicio</a>
+  <a class="nav-link" href="#">Vehículo</a>
+  <a class="nav-link" href="#">Seminuevos</a>
+  <a class="nav-link" href="#">Concesionarios</a>
+  <a class="nav-link" href="#">Servicios</a>
+  <a class="nav-link" href="#">Historias</a>
+  <a class="nav-link" href="#">Historias</a>
+
+</nav>
 
     <!-- Contenido principal -->
-    <main class="main-content">
-      <header class="header">
+    <main >
+      <header >
         <h3>Renueva las reglas</h3>
       </header>
 
       <!-- Sección principal -->
-      <section class="hero">
-        <div class="info">
+      <section >
+        <div >
           <h1>Ferrari F80 😎</h1>
           <p>Compacto, moderno y versátil. El Ferrari F80 es ideal para moverte con estilo y comodidad por la ciudad.</p>
-          <p class="bold">¡Ven y experimenta su espíritu urbano!</p>
+          <p >¡Ven y experimenta su espíritu urbano!</p>
           <button>Más info</button>
         </div>
-        <div class="image">
+        <div >
           <img src="img/Ferrari.png" alt="Ferrari F80">
         </div>
       </section>
 
       <!-- Sección de nuevos vehículos -->
-      <section class="nuevos">
-        <div class="nuevos-header">
+      <section >
+        <div >
           <h2><span>*</span> Recién Llegados</h2>
-          <button class="ver-todos">Ver todos</button>
+          <button >Ver todos</button>
         </div>
 
-        <div class="vehiculos">
-          <div class="card">
+        <div >
+          <div >
             <img src="img/delorean.png" alt="DeLorean DMC-12">
-            <span class="nuevo">Nuevo</span>
+            <span >Nuevo</span>
             <h3>DeLorean DMC-12</h3>
             <p>Delorean &lt; good</p>
           </div>
 
-          <div class="card">
+          <div >
             <img src="img/bugatti.png" alt="Bugatti Chiron">
-            <span class="nuevo">Nuevo</span>
+            <span >Nuevo</span>
             <h3>Bugatti</h3>
             <p>SM</p>
           </div>
 
-          <div class="card">
+          <div >
             <img src="img/mercedes.png" alt="Mercedes Benz">
-            <span class="nuevo">Nuevo</span>
+            <span >Nuevo</span>
             <h3>Mercedes</h3>
             <p>Mercedes &lt; Benz</p>
           </div>
 
-          <div class="card">
+          <div >
             <img src="img/aveo.png" alt="Aveo">
-            <span class="nuevo">Nuevo</span>
+            <span >Nuevo</span>
             <h3>Aveo Family</h3>
             <p>Chevrolet &lt; Good</p>
           </div>
         </div>
 
-        <div class="marcas">
+        <div >
           <p><strong>NUESTRAS MARCAS:</strong></p>
-          <div class="logos">
+          <div >
             <img src="img/lambo.png" alt="Lamborghini">
             <img src="img/logomercedez.png" alt="Mercedes Benz">
             <img src="img/bugatilogosi.png" alt="Bugatti">
@@ -96,24 +114,24 @@
       </section>
 
       <!-- Formulario de contacto -->
-      <section id="formulario-compra" class="formulario-contacto">
+      <section id="formulario-compra" >
         <h2>Formulario de Interés de Compra</h2>
         <p>Déjanos saber qué buscas y un asesor te contactará.</p>
 
         <form action="enviar-formulario.php" method="POST" target="_blank">
           <fieldset>
             <legend>Datos de Contacto</legend>
-            <div class="form-grupo">
+            <div >
               <label for="nombre">Nombre Completo:</label>
               <input type="text" id="nombre" name="nombre_cliente" required>
             </div>
 
-            <div class="form-grupo">
+            <div >
               <label for="email">Correo Electrónico:</label>
               <input type="email" id="email" name="email_cliente" required>
             </div>
 
-            <div class="form-grupo">
+            <div >
               <label for="telefono">Teléfono:</label>
               <input type="tel" id="telefono" name="telefono_cliente">
             </div>
@@ -121,7 +139,7 @@
 
           <fieldset>
             <legend>Preferencias del Vehículo</legend>
-            <div class="form-grupo">
+            <div >
               <label for="tipo-vehiculo">Tipo de Vehículo:</label>
               <select id="tipo-vehiculo" name="tipo_vehiculo">
                 <option value="">Seleccione una opción</option>
@@ -134,7 +152,7 @@
               </select>
             </div>
 
-            <div class="form-grupo">
+            <div >
               <label for="marca">Marca de Interés:</label>
               <input list="marcas-disponibles" id="marca" name="marca_interes">
               <datalist id="marcas-disponibles">
@@ -148,7 +166,7 @@
               </datalist>
             </div>
 
-            <div class="form-grupo-radio">
+            <div >
               <p>Condición del Vehículo:</p>
               <input type="radio" id="condicion-nuevo" name="condicion" value="nuevo" checked>
               <label for="condicion-nuevo">Nuevo</label>
@@ -156,12 +174,12 @@
               <label for="condicion-seminuevo">Seminuevo</label>
             </div>
 
-            <div class="form-grupo">
+            <div >
               <label for="presupuesto">Presupuesto Aproximado (USD):</label>
               <input type="number" id="presupuesto" name="presupuesto_max" min="10000" step="1000">
             </div>
 
-            <div class="form-grupo-radio">
+            <div >
               <p>Método de Pago Principal:</p>
               <input type="radio" id="pago-contado" name="metodo_pago" value="contado">
               <label for="pago-contado">Contado</label>
@@ -169,28 +187,28 @@
               <label for="pago-financiamiento">Credito</label>
             </div>
 
-            <div class="form-grupo">
+            <div >
               <label for="prioridad-rendimiento">Prioridad en Rendimiento (1=Baja, 5=Alta):</label>
               <input type="range" id="prioridad-rendimiento" name="prioridad_rendimiento" min="1" max="5" value="3">
             </div>
 
-            <div class="form-grupo">
+            <div >
               <label for="prioridad-seguridad">Prioridad en Seguridad (1=Baja, 5=Alta):</label>
               <input type="range" id="prioridad-seguridad" name="prioridad_seguridad" min="1" max="5" value="3">
             </div>
 
-            <div class="form-grupo">
+            <div >
               <label for="prioridad-tecnologia">Prioridad en Tecnología (1=Baja, 5=Alta):</label>
               <input type="range" id="prioridad-tecnologia" name="prioridad_tecnologia" min="1" max="5" value="3">
             </div>
 
-            <div class="form-grupo">
+            <div >
               <label for="comentarios">Comentarios Adicionales:</label>
               <textarea id="comentarios" name="comentarios_adicionales" rows="4" cols="50"></textarea>
             </div>
           </fieldset>
 
-          <button type="submit" class="boton-enviar">Enviar Formulario</button>
+          <button type="submit" >Enviar Formulario</button>
         </form>
       </section>
     </main>
