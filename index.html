@@ -101,8 +101,9 @@
         <p>Déjanos saber qué buscas y un asesor te contactará.</p>
 
         <form action="enviar-formulario.php" method="POST" target="_blank">
-          <fieldset>
+          <fieldset style="padding: 20px;">
             <legend>Datos de Contacto</legend>
+            <br>
             <div class="form-grupo">
               <label for="nombre">Nombre Completo:</label>
               <input type="text" id="nombre" name="nombre_cliente" required>
@@ -118,9 +119,11 @@
               <input type="tel" id="telefono" name="telefono_cliente">
             </div>
           </fieldset>
+          <br>
 
-          <fieldset>
+          <fieldset style="padding: 20px;">
             <legend>Preferencias del Vehículo</legend>
+            <br>
             <div class="form-grupo">
               <label for="tipo-vehiculo">Tipo de Vehículo:</label>
               <select id="tipo-vehiculo" name="tipo_vehiculo">
