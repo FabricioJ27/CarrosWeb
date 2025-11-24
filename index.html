@@ -4,214 +4,249 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DarckCar</title>
-  <link rel="stylesheet" >
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons opcionales -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="img/favicon.png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-<body>
-  <div >
-    <!-- Barra lateral -->
-<div class="container">
-  <nav >
-      <div >
-        <h2>DarckCar</h2>
-      </div>
-      <ul >
-        <li><a href="#" >Inicio</a></li>
-        <li><a href="#">Vehículos</a></li>
-        <li><a href="#">Seminuevos</a></li>
-        <li><a href="#">Concesionarios</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Historias</a></li>
-        <li><a href="#formulario-compra">Formulario</a></li>
-        <li><a href="#" >Cotizador Virtual</a></li>
-      </ul>
-    </nav>
-  
-</div>
 
-<nav class="nav flex-column">
-  <div >
-        <h2>DarckCar</h2>
-      </div>
-  <a class="nav-link" href="#">Inicio</a>
-  <a class="nav-link" href="#">Vehículo</a>
-  <a class="nav-link" href="#">Seminuevos</a>
-  <a class="nav-link" href="#">Concesionarios</a>
-  <a class="nav-link" href="#">Servicios</a>
-  <a class="nav-link" href="#">Historias</a>
-  <a class="nav-link" href="#">Historias</a>
+<body class="bg-dark text-light">
 
-</nav>
+  <div class="container-fluid">
+    <div class="row">
 
-    <!-- Contenido principal -->
-    <main >
-      <header >
-        <h3>Renueva las reglas</h3>
-      </header>
+      <!-- SIDEBAR -->
+      <nav class="sidebar col-12 col-md-3 col-lg-2 d-flex flex-column align-items-start p-4 bg-dark border-end border-danger position-fixed h-100">
 
-      <!-- Sección principal -->
-      <section >
-        <div >
-          <h1>Ferrari F80 😎</h1>
-          <p>Compacto, moderno y versátil. El Ferrari F80 es ideal para moverte con estilo y comodidad por la ciudad.</p>
-          <p >¡Ven y experimenta su espíritu urbano!</p>
-          <button>Más info</button>
-        </div>
-        <div >
-          <img src="img/Ferrari.png" alt="Ferrari F80">
-        </div>
-      </section>
-
-      <!-- Sección de nuevos vehículos -->
-      <section >
-        <div >
-          <h2><span>*</span> Recién Llegados</h2>
-          <button >Ver todos</button>
+        <div class="logo text-center w-100 mb-4">
+          <h2 class="text-danger fw-bold">DarckCar</h2>
         </div>
 
-        <div >
-          <div >
-            <img src="img/delorean.png" alt="DeLorean DMC-12">
-            <span >Nuevo</span>
-            <h3>DeLorean DMC-12</h3>
-            <p>Delorean &lt; good</p>
+        <ul class="menu nav flex-column w-100">
+          <li class="nav-item mb-2">
+            <a class="nav-link active text-light rounded px-3 py-2" href="#">Inicio</a>
+          </li>
+          <li class="nav-item mb-2"><a class="nav-link text-secondary px-3 py-2" href="#">Vehículos</a></li>
+          <li class="nav-item mb-2"><a class="nav-link text-secondary px-3 py-2" href="#">Seminuevos</a></li>
+          <li class="nav-item mb-2"><a class="nav-link text-secondary px-3 py-2" href="#">Concesionarios</a></li>
+          <li class="nav-item mb-2"><a class="nav-link text-secondary px-3 py-2" href="#">Servicios</a></li>
+          <li class="nav-item mb-2"><a class="nav-link text-secondary px-3 py-2" href="#">Historias</a></li>
+          <li class="nav-item mb-2"><a class="nav-link text-secondary px-3 py-2" href="#formulario-compra">Formulario</a></li>
+
+          <li class="nav-item mt-3">
+            <a class="nav-link cotizador bg-white text-danger fw-bold text-center rounded px-3 py-2" href="#">
+              Cotizador Virtual
+            </a>
+          </li>
+        </ul>
+
+      </nav>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content col-md-9 offset-md-3 col-lg-10 offset-lg-2 p-5">
+
+        <!-- Header -->
+        <header class="mb-4">
+          <h3 class="text-uppercase text-danger fw-bold">Renueva las reglas</h3>
+        </header>
+
+        <!-- HERO -->
+        <section class="hero d-flex flex-column flex-lg-row justify-content-between align-items-center p-5 rounded bg-dark border border-secondary shadow-lg">
+
+          <div class="info me-lg-4">
+            <h1 class="display-4 fw-bold text-white">Ferrari F80 😎</h1>
+            <p class="text-secondary">Compacto, moderno y versátil. El Ferrari F80 es ideal para moverte con estilo y comodidad por la ciudad.</p>
+            <p class="bold fw-bold">¡Ven y experimenta su espíritu urbano!</p>
+
+            <button class="btn btn-danger btn-lg mt-3">Más info</button>
           </div>
 
-          <div >
-            <img src="img/bugatti.png" alt="Bugatti Chiron">
-            <span >Nuevo</span>
-            <h3>Bugatti</h3>
-            <p>SM</p>
+          <div class="image mt-4 mt-lg-0">
+            <img src="img/Ferrari.png" class="img-fluid" alt="Ferrari F80">
           </div>
 
-          <div >
-            <img src="img/mercedes.png" alt="Mercedes Benz">
-            <span >Nuevo</span>
-            <h3>Mercedes</h3>
-            <p>Mercedes &lt; Benz</p>
+        </section>
+
+        <!-- NUEVOS VEHÍCULOS -->
+        <section class="nuevos mt-5">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="fw-bold"><span class="text-danger">*</span> Recién Llegados</h2>
+            <button class="btn btn-outline-danger">Ver todos</button>
           </div>
 
-          <div >
-            <img src="img/aveo.png" alt="Aveo">
-            <span >Nuevo</span>
-            <h3>Aveo Family</h3>
-            <p>Chevrolet &lt; Good</p>
+          <!-- Grid vehículos -->
+          <div class="row g-4">
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card bg-dark text-light p-3 shadow position-relative">
+                <img src="img/delorean.png" class="card-img-top rounded" alt="DeLorean">
+                <span class="nuevo position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded">Nuevo</span>
+                <h3 class="mt-3">DeLorean DMC-12</h3>
+                <p class="text-secondary">Delorean &lt; good</p>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card bg-dark text-light p-3 shadow position-relative">
+                <img src="img/bugatti.png" class="card-img-top rounded" alt="Bugatti">
+                <span class="nuevo position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded">Nuevo</span>
+                <h3 class="mt-3">Bugatti</h3>
+                <p class="text-secondary">SM</p>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card bg-dark text-light p-3 shadow position-relative">
+                <img src="img/mercedes.png" class="card-img-top rounded" alt="Mercedes Benz">
+                <span class="nuevo position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded">Nuevo</span>
+                <h3 class="mt-3">Mercedes</h3>
+                <p class="text-secondary">Mercedes &lt; Benz</p>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card bg-dark text-light p-3 shadow position-relative">
+                <img src="img/aveo.png" class="card-img-top rounded" alt="Aveo">
+                <span class="nuevo position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded">Nuevo</span>
+                <h3 class="mt-3">Aveo Family</h3>
+                <p class="text-secondary">Chevrolet &lt; Good</p>
+              </div>
+            </div>
+
           </div>
-        </div>
 
-        <div >
-          <p><strong>NUESTRAS MARCAS:</strong></p>
-          <div >
-            <img src="img/lambo.png" alt="Lamborghini">
-            <img src="img/logomercedez.png" alt="Mercedes Benz">
-            <img src="img/bugatilogosi.png" alt="Bugatti">
-            <img src="img/ferrarilogo.png" alt="Ferrari">
-            <img src="img/Chevrolet-logo.png" alt="Chevrolet">
-            <img src="img/Toyota-logo.png" alt="Toyota">
+          <!-- Marcas -->
+          <div class="marcas text-center mt-5">
+            <p class="fw-bold">NUESTRAS MARCAS:</p>
+
+            <div class="d-flex justify-content-center align-items-center flex-wrap gap-4 mt-3">
+              <img src="img/lambo.png" width="80" class="img-fluid grayscale-hover">
+              <img src="img/logomercedez.png" width="80" class="img-fluid grayscale-hover">
+              <img src="img/bugatilogosi.png" width="80" class="img-fluid grayscale-hover">
+              <img src="img/ferrarilogo.png" width="80" class="img-fluid grayscale-hover">
+              <img src="img/Chevrolet-logo.png" width="80" class="img-fluid grayscale-hover">
+              <img src="img/Toyota-logo.png" width="80" class="img-fluid grayscale-hover">
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Formulario de contacto -->
-      <section id="formulario-compra" >
-        <h2>Formulario de Interés de Compra</h2>
-        <p>Déjanos saber qué buscas y un asesor te contactará.</p>
+        <!-- FORMULARIO -->
+        <section id="formulario-compra" class="formulario-contacto mt-5 p-5 bg-dark rounded shadow border-top border-danger">
 
-        <form action="enviar-formulario.php" method="POST" target="_blank">
-          <fieldset>
-            <legend>Datos de Contacto</legend>
-            <div >
-              <label for="nombre">Nombre Completo:</label>
-              <input type="text" id="nombre" name="nombre_cliente" required>
-            </div>
+          <h2 class="text-danger text-center fw-bold">Formulario de Interés de Compra</h2>
+          <p class="text-center text-secondary mb-4">Déjanos saber qué buscas y un asesor te contactará.</p>
 
-            <div >
-              <label for="email">Correo Electrónico:</label>
-              <input type="email" id="email" name="email_cliente" required>
-            </div>
+          <form action="enviar-formulario.php" method="POST" target="_blank" class="mx-auto">
 
-            <div >
-              <label for="telefono">Teléfono:</label>
-              <input type="tel" id="telefono" name="telefono_cliente">
-            </div>
-          </fieldset>
+            <!-- Datos de contacto -->
+            <fieldset class="mb-4">
+              <legend class="mb-3 fw-bold">Datos de Contacto</legend>
 
-          <fieldset>
-            <legend>Preferencias del Vehículo</legend>
-            <div >
-              <label for="tipo-vehiculo">Tipo de Vehículo:</label>
-              <select id="tipo-vehiculo" name="tipo_vehiculo">
-                <option value="">Seleccione una opción</option>
-                <option value="sedan">Sedán</option>
-                <option value="suv">SUV</option>
-                <option value="hatchback">Hatchback</option>
-                <option value="deportivo">Deportivo</option>
-                <option value="camioneta">Camioneta (Pick-up)</option>
-                <option value="electrico">Eléctrico / Híbrido</option>
-              </select>
-            </div>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre Completo:</label>
+                <input type="text" class="form-control bg-danger text-light" id="nombre" name="nombre_cliente" required>
+              </div>
 
-            <div >
-              <label for="marca">Marca de Interés:</label>
-              <input list="marcas-disponibles" id="marca" name="marca_interes">
-              <datalist id="marcas-disponibles">
-                <option value="Ferrari">
-                <option value="DeLorean">
-                <option value="Bugatti">
-                <option value="Mercedes-Benz">
-                <option value="Chevrolet">
-                <option value="Lamborghini">
-                <option value="Toyota">
-              </datalist>
-            </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico:</label>
+                <input type="email" class="form-control bg-danger text-light" id="email" name="email_cliente" required>
+              </div>
 
-            <div >
-              <p>Condición del Vehículo:</p>
-              <input type="radio" id="condicion-nuevo" name="condicion" value="nuevo" checked>
-              <label for="condicion-nuevo">Nuevo</label>
-              <input type="radio" id="condicion-seminuevo" name="condicion" value="seminuevo">
-              <label for="condicion-seminuevo">Seminuevo</label>
-            </div>
+              <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono:</label>
+                <input type="tel" class="form-control bg-danger text-light" id="telefono" name="telefono_cliente">
+              </div>
+            </fieldset>
 
-            <div >
-              <label for="presupuesto">Presupuesto Aproximado (USD):</label>
-              <input type="number" id="presupuesto" name="presupuesto_max" min="10000" step="1000">
-            </div>
+            <!-- Preferencias -->
+            <fieldset class="mb-4">
+              <legend class="mb-3 fw-bold">Preferencias del Vehículo</legend>
 
-            <div >
-              <p>Método de Pago Principal:</p>
-              <input type="radio" id="pago-contado" name="metodo_pago" value="contado">
-              <label for="pago-contado">Contado</label>
-              <input type="radio" id="pago-financiamiento" name="metodo_pago" value="financiamiento">
-              <label for="pago-financiamiento">Credito</label>
-            </div>
+              <div class="mb-3">
+                <label for="tipo-vehiculo" class="form-label">Tipo de Vehículo:</label>
+                <select class="form-select bg-danger text-light" id="tipo-vehiculo" name="tipo_vehiculo">
+                  <option value="">Seleccione una opción</option>
+                  <option value="sedan">Sedán</option>
+                  <option value="suv">SUV</option>
+                  <option value="hatchback">Hatchback</option>
+                  <option value="deportivo">Deportivo</option>
+                  <option value="camioneta">Camioneta (Pick-up)</option>
+                  <option value="electrico">Eléctrico / Híbrido</option>
+                </select>
+              </div>
 
-            <div >
-              <label for="prioridad-rendimiento">Prioridad en Rendimiento (1=Baja, 5=Alta):</label>
-              <input type="range" id="prioridad-rendimiento" name="prioridad_rendimiento" min="1" max="5" value="3">
-            </div>
+              <div class="mb-3">
+                <label for="marca" class="form-label">Marca de Interés:</label>
+                <input list="marcas-disponibles" class="form-control bg-danger text-light" id="marca" name="marca_interes">
+                <datalist id="marcas-disponibles">
+                  <option value="Ferrari">
+                  <option value="DeLorean">
+                  <option value="Bugatti">
+                  <option value="Mercedes-Benz">
+                  <option value="Chevrolet">
+                  <option value="Lamborghini">
+                  <option value="Toyota">
+                </datalist>
+              </div>
 
-            <div >
-              <label for="prioridad-seguridad">Prioridad en Seguridad (1=Baja, 5=Alta):</label>
-              <input type="range" id="prioridad-seguridad" name="prioridad_seguridad" min="1" max="5" value="3">
-            </div>
+              <div class="mb-3">
+                <p class="mb-2">Condición del Vehículo:</p>
 
-            <div >
-              <label for="prioridad-tecnologia">Prioridad en Tecnología (1=Baja, 5=Alta):</label>
-              <input type="range" id="prioridad-tecnologia" name="prioridad_tecnologia" min="1" max="5" value="3">
-            </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="condicion" id="condicion-nuevo" value="nuevo" checked>
+                  <label class="form-check-label" for="condicion-nuevo">Nuevo</label>
+                </div>
 
-            <div >
-              <label for="comentarios">Comentarios Adicionales:</label>
-              <textarea id="comentarios" name="comentarios_adicionales" rows="4" cols="50"></textarea>
-            </div>
-          </fieldset>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="condicion" id="condicion-seminuevo" value="seminuevo">
+                  <label class="form-check-label" for="condicion-seminuevo">Seminuevo</label>
+                </div>
+              </div>
 
-          <button type="submit" >Enviar Formulario</button>
-        </form>
-      </section>
-    </main>
+              <div class="mb-3">
+                <label for="presupuesto" class="form-label">Presupuesto Aproximado (USD):</label>
+                <input type="number" class="form-control bg-danger text-light" id="presupuesto" name="presupuesto_max" min="10000" step="1000">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Prioridad en Rendimiento:</label>
+                <input type="range" class="form-range" name="prioridad_rendimiento" min="1" max="5" value="3">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Prioridad en Seguridad:</label>
+                <input type="range" class="form-range" name="prioridad_seguridad" min="1" max="5" value="3">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Prioridad en Tecnología:</label>
+                <input type="range" class="form-range" name="prioridad_tecnologia" min="1" max="5" value="3">
+              </div>
+
+              <div class="mb-3">
+                <label for="comentarios" class="form-label">Comentarios Adicionales:</label>
+                <textarea class="form-control bg-danger text-light" id="comentarios" name="comentarios_adicionales" rows="4"></textarea>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn-danger btn-lg d-block mx-auto px-5">Enviar Formulario</button>
+
+          </form>
+
+        </section>
+
+      </main>
+    </div>
   </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
