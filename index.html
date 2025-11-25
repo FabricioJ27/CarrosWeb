@@ -1,199 +1,435 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DarckCar</title>
-  <link rel="stylesheet" >
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="img/favicon.png">
+  <style>
+    /* Custom Styles to match original design */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #111;
+    }
+
+    :root {
+      --primary-red: #d8232a;
+      --primary-red-hover: #b31b21;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background-color: #1a1a1a;
+      border-right: 3px solid var(--primary-red);
+      min-height: 100vh;
+      padding: 30px 20px;
+    }
+
+    .sidebar .logo h2 {
+      color: var(--primary-red);
+      font-weight: bold;
+    }
+
+    .nav-link {
+      color: #ccc;
+      border-radius: 8px;
+      transition: all 0.3s;
+      padding: 10px 15px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      background-color: var(--primary-red);
+      color: white;
+    }
+
+    .btn-cotizador {
+      background-color: white;
+      color: var(--primary-red);
+      font-weight: bold;
+    }
+
+    .btn-cotizador:hover {
+      background-color: #f0f0f0;
+      color: var(--primary-red-hover);
+    }
+
+    /* Main Content */
+    .header h3 {
+      color: var(--primary-red);
+      text-transform: uppercase;
+      font-size: 1.25rem;
+    }
+
+    /* Hero */
+    .hero-section {
+      background-color: #222;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(216, 35, 42, 0.3);
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .btn-primary-custom {
+      background-color: var(--primary-red);
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .btn-primary-custom:hover {
+      background-color: var(--primary-red-hover);
+    }
+
+    /* Cards */
+    .custom-card {
+      background-color: #1e1e1e;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(216, 35, 42, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .custom-card:hover {
+      transform: scale(1.05);
+    }
+
+    .badge-new {
+      background-color: var(--primary-red);
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .btn-outline-custom {
+      border-color: var(--primary-red);
+      color: var(--primary-red);
+    }
+
+    .btn-outline-custom:hover {
+      background-color: var(--primary-red);
+      color: white;
+      border-color: var(--primary-red);
+    }
+
+    /* Logos */
+    .brand-logo {
+      width: 80px;
+      filter: grayscale(100%);
+      transition: 0.3s;
+    }
+
+    .brand-logo:hover {
+      filter: grayscale(0%);
+      transform: scale(1.1);
+    }
+
+    /* Form */
+    .contact-form {
+      background-color: #1b1b1b;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(216, 35, 42, 0.3);
+      border-top: 4px solid var(--primary-red);
+    }
+
+    .form-control,
+    .form-select {
+      background-color: #f32020;
+      background-color: #f32020;
+      border: 1px solid #444;
+      color: #f5f5f5;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      background-color: #f32020;
+      color: #f5f5f5;
+      border-color: var(--primary-red);
+      box-shadow: 0 0 6px rgba(216, 35, 42, 0.5);
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      background: var(--primary-red);
+    }
+
+    .section-title span {
+      color: var(--primary-red);
+    }
+  </style>
 </head>
+
 <body>
-  <div class="container">
-    <!-- Barra lateral -->
-    <nav class="sidebar">
-      <div class="logo">
-        <h2>DarckCar</h2>
-      </div>
-      <ul class="menu">
-        <li><a href="#" class="active">Inicio</a></li>
-        <li><a href="#">Vehículos</a></li>
-        <li><a href="#">Seminuevos</a></li>
-        <li><a href="#">Concesionarios</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Historias</a></li>
-        <li><a href="#formulario-compra">Formulario</a></li>
-        <li><a href="#" class="cotizador">Cotizador Virtual</a></li>
-      </ul>
-    </nav>
 
-    <!-- Contenido principal -->
-    <main class="main-content">
-      <header class="header">
-        <h3>Renueva las reglas</h3>
-      </header>
+  <div class="container-fluid">
+    <div class="row">
 
-      <!-- Sección principal -->
-      <section class="hero">
-        <div class="info">
-          <h1>Ferrari F80 😎</h1>
-          <p>Compacto, moderno y versátil. El Ferrari F80 es ideal para moverte con estilo y comodidad por la ciudad.</p>
-          <p class="bold">¡Ven y experimenta su espíritu urbano!</p>
-          <button>Más info</button>
+      <!-- Sidebar -->
+      <nav class="col-md-3 col-lg-2 d-md-block sidebar collapse show">
+        <div class="position-sticky pt-3">
+          <div class="logo text-center mb-4">
+            <h2>DarckCar</h2>
+          </div>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a class="nav-link active" href="#">Inicio</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link" href="#">Vehículos</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link" href="#">Seminuevos</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link" href="#">Concesionarios</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link" href="#">Servicios</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link" href="#">Historias</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link" href="#formulario-compra">Formulario</a>
+            </li>
+            <li class="nav-item mt-4">
+              <a class="nav-link btn-cotizador text-center" href="#">Cotizador Virtual</a>
+            </li>
+          </ul>
         </div>
-        <div class="image">
-          <img src="img/Ferrari.png" alt="Ferrari F80">
-        </div>
-      </section>
+      </nav>
 
-      <!-- Sección de nuevos vehículos -->
-      <section class="nuevos">
-        <div class="nuevos-header">
-          <h2><span>*</span> Recién Llegados</h2>
-          <button class="ver-todos">Ver todos</button>
-        </div>
+      <!-- Main Content -->
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
 
-        <div class="vehiculos">
-          <div class="card">
-            <img src="img/delorean.png" alt="DeLorean DMC-12">
-            <span class="nuevo">Nuevo</span>
-            <h3>DeLorean DMC-12</h3>
-            <p>Delorean &lt; good</p>
+        <header class="header mb-4">
+          <h3>Renueva las reglas</h3>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section p-5 mb-5 d-flex align-items-center flex-wrap flex-lg-nowrap">
+          <div class="info flex-grow-1 me-lg-5 mb-4 mb-lg-0">
+            <h1 class="hero-title text-white mb-3">Ferrari F80 😎</h1>
+            <p class="text-secondary mb-2">Compacto, moderno y versátil. El Ferrari F80 es ideal para moverte con estilo
+              y comodidad por la ciudad.</p>
+            <p class="text-white fw-bold mb-4">¡Ven y experimenta su espíritu urbano!</p>
+            <button class="btn btn-primary-custom">Más info</button>
+          </div>
+          <div class="image text-center">
+            <img src="img/Ferrari.png" alt="Ferrari F80" class="img-fluid" style="max-width: 450px;">
+          </div>
+        </section>
+
+        <!-- New Vehicles Section -->
+        <section class="nuevos mb-5">
+          <div class="d-flex justify-content-between align-items-center mb-4 section-title">
+            <h2 class="h3 mb-0"><span>*</span> Recién Llegados</h2>
+            <button class="btn btn-outline-custom">Ver todos</button>
           </div>
 
-          <div class="card">
-            <img src="img/bugatti.png" alt="Bugatti Chiron">
-            <span class="nuevo">Nuevo</span>
-            <h3>Bugatti</h3>
-            <p>SM</p>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+            <div class="col">
+              <div class="card h-100 custom-card text-center p-3">
+                <span class="badge badge-new rounded-pill">Nuevo</span>
+                <img src="img/delorean.png" class="card-img-top rounded" alt="DeLorean DMC-12">
+                <div class="card-body">
+                  <h3 class="h5 card-title text-white">DeLorean DMC-12</h3>
+                  <p class="card-text text-secondary">Delorean &lt; good</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100 custom-card text-center p-3">
+                <span class="badge badge-new rounded-pill">Nuevo</span>
+                <img src="img/bugatti.png" class="card-img-top rounded" alt="Bugatti Chiron">
+                <div class="card-body">
+                  <h3 class="h5 card-title text-white">Bugatti</h3>
+                  <p class="card-text text-secondary">SM</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100 custom-card text-center p-3">
+                <span class="badge badge-new rounded-pill">Nuevo</span>
+                <img src="img/mercedes.png" class="card-img-top rounded" alt="Mercedes Benz">
+                <div class="card-body">
+                  <h3 class="h5 card-title text-white">Mercedes</h3>
+                  <p class="card-text text-secondary">Mercedes &lt; Benz</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100 custom-card text-center p-3">
+                <span class="badge badge-new rounded-pill">Nuevo</span>
+                <img src="img/aveo.png" class="card-img-top rounded" alt="Aveo">
+                <div class="card-body">
+                  <h3 class="h5 card-title text-white">Aveo Family</h3>
+                  <p class="card-text text-secondary">Chevrolet &lt; Good</p>
+                </div>
+              </div>
+            </div>
+
           </div>
 
-          <div class="card">
-            <img src="img/mercedes.png" alt="Mercedes Benz">
-            <span class="nuevo">Nuevo</span>
-            <h3>Mercedes</h3>
-            <p>Mercedes &lt; Benz</p>
+          <!-- Brands -->
+          <div class="marcas text-center mt-5">
+            <p class="fw-bold mb-4">NUESTRAS MARCAS:</p>
+            <div class="d-flex justify-content-center align-items-center flex-wrap gap-4">
+              <img src="img/lambo.png" alt="Lamborghini" class="brand-logo">
+              <img src="img/logomercedez.png" alt="Mercedes Benz" class="brand-logo">
+              <img src="img/bugatilogosi.png" alt="Bugatti" class="brand-logo">
+              <img src="img/ferrarilogo.png" alt="Ferrari" class="brand-logo">
+              <img src="img/Chevrolet-logo.png" alt="Chevrolet" class="brand-logo">
+              <img src="img/Toyota-logo.png" alt="Toyota" class="brand-logo">
+            </div>
           </div>
+        </section>
 
-          <div class="card">
-            <img src="img/aveo.png" alt="Aveo">
-            <span class="nuevo">Nuevo</span>
-            <h3>Aveo Family</h3>
-            <p>Chevrolet &lt; Good</p>
-          </div>
-        </div>
+        <!-- Contact Form -->
+        <section id="formulario-compra" class="contact-form p-5 mt-5">
+          <h2 class="text-center mb-2" style="color: var(--primary-red);">Formulario de Interés de Compra</h2>
+          <p class="text-center text-secondary mb-4">Déjanos saber qué buscas y un asesor te contactará.</p>
 
-        <div class="marcas">
-          <p><strong>NUESTRAS MARCAS:</strong></p>
-          <div class="logos">
-            <img src="img/lambo.png" alt="Lamborghini">
-            <img src="img/logomercedez.png" alt="Mercedes Benz">
-            <img src="img/bugatilogosi.png" alt="Bugatti">
-            <img src="img/ferrarilogo.png" alt="Ferrari">
-            <img src="img/Chevrolet-logo.png" alt="Chevrolet">
-            <img src="img/Toyota-logo.png" alt="Toyota">
-          </div>
-        </div>
-      </section>
+          <form action="enviar-formulario.php" method="POST" target="_blank">
+            <div class="row">
 
-      <!-- Formulario de contacto -->
-      <section id="formulario-compra" class="formulario-contacto">
-        <h2>Formulario de Interés de Compra</h2>
-        <p>Déjanos saber qué buscas y un asesor te contactará.</p>
+              <!-- Contact Data -->
+              <div class="col-md-6 mb-4">
+                <fieldset>
+                  <legend class="h5 text-white mb-3">Datos de Contacto</legend>
+                  <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre Completo:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre_cliente" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico:</label>
+                    <input type="email" class="form-control" id="email" name="email_cliente" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="telefono" class="form-label">Teléfono:</label>
+                    <input type="tel" class="form-control" id="telefono" name="telefono_cliente">
+                  </div>
+                </fieldset>
+              </div>
 
-        <form action="enviar-formulario.php" method="POST" target="_blank">
-          <fieldset>
-            <legend>Datos de Contacto</legend>
-            <div class="form-grupo">
-              <label for="nombre">Nombre Completo:</label>
-              <input type="text" id="nombre" name="nombre_cliente" required>
+              <!-- Vehicle Preferences -->
+              <div class="col-md-6 mb-4">
+                <fieldset>
+                  <legend class="h5 text-white mb-3">Preferencias del Vehículo</legend>
+                  <div class="mb-3">
+                    <label for="tipo-vehiculo" class="form-label">Tipo de Vehículo:</label>
+                    <select class="form-select" id="tipo-vehiculo" name="tipo_vehiculo">
+                      <option value="">Seleccione una opción</option>
+                      <option value="sedan">Sedán</option>
+                      <option value="suv">SUV</option>
+                      <option value="hatchback">Hatchback</option>
+                      <option value="deportivo">Deportivo</option>
+                      <option value="camioneta">Camioneta (Pick-up)</option>
+                      <option value="electrico">Eléctrico / Híbrido</option>
+                    </select>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="marca" class="form-label">Marca de Interés:</label>
+                    <input class="form-control" list="marcas-disponibles" id="marca" name="marca_interes">
+                    <datalist id="marcas-disponibles">
+                      <option value="Ferrari">
+                      <option value="DeLorean">
+                      <option value="Bugatti">
+                      <option value="Mercedes-Benz">
+                      <option value="Chevrolet">
+                      <option value="Lamborghini">
+                      <option value="Toyota">
+                    </datalist>
+                  </div>
+
+                  <div class="mb-3">
+                    <p class="mb-2">Condición del Vehículo:</p>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" id="condicion-nuevo" name="condicion" value="nuevo"
+                        checked>
+                      <label class="form-check-label" for="condicion-nuevo">Nuevo</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" id="condicion-seminuevo" name="condicion"
+                        value="seminuevo">
+                      <label class="form-check-label" for="condicion-seminuevo">Seminuevo</label>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="presupuesto" class="form-label">Presupuesto Aproximado (USD):</label>
+                    <input type="number" class="form-control" id="presupuesto" name="presupuesto_max" min="10000"
+                      step="1000">
+                  </div>
+
+                  <div class="mb-3">
+                    <p class="mb-2">Método de Pago Principal:</p>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" id="pago-contado" name="metodo_pago" value="contado">
+                      <label class="form-check-label" for="pago-contado">Contado</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" id="pago-financiamiento" name="metodo_pago"
+                        value="financiamiento">
+                      <label class="form-check-label" for="pago-financiamiento">Credito</label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
             </div>
 
-            <div class="form-grupo">
-              <label for="email">Correo Electrónico:</label>
-              <input type="email" id="email" name="email_cliente" required>
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <label for="prioridad-rendimiento" class="form-label">Prioridad en Rendimiento (1-5):</label>
+                <input type="range" class="form-range" id="prioridad-rendimiento" name="prioridad_rendimiento" min="1"
+                  max="5" value="3">
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="prioridad-seguridad" class="form-label">Prioridad en Seguridad (1-5):</label>
+                <input type="range" class="form-range" id="prioridad-seguridad" name="prioridad_seguridad" min="1"
+                  max="5" value="3">
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="prioridad-tecnologia" class="form-label">Prioridad en Tecnología (1-5):</label>
+                <input type="range" class="form-range" id="prioridad-tecnologia" name="prioridad_tecnologia" min="1"
+                  max="5" value="3">
+              </div>
             </div>
 
-            <div class="form-grupo">
-              <label for="telefono">Teléfono:</label>
-              <input type="tel" id="telefono" name="telefono_cliente">
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend>Preferencias del Vehículo</legend>
-            <div class="form-grupo">
-              <label for="tipo-vehiculo">Tipo de Vehículo:</label>
-              <select id="tipo-vehiculo" name="tipo_vehiculo">
-                <option value="">Seleccione una opción</option>
-                <option value="sedan">Sedán</option>
-                <option value="suv">SUV</option>
-                <option value="hatchback">Hatchback</option>
-                <option value="deportivo">Deportivo</option>
-                <option value="camioneta">Camioneta (Pick-up)</option>
-                <option value="electrico">Eléctrico / Híbrido</option>
-              </select>
+            <div class="mb-4">
+              <label for="comentarios" class="form-label">Comentarios Adicionales:</label>
+              <textarea class="form-control" id="comentarios" name="comentarios_adicionales" rows="4"></textarea>
             </div>
 
-            <div class="form-grupo">
-              <label for="marca">Marca de Interés:</label>
-              <input list="marcas-disponibles" id="marca" name="marca_interes">
-              <datalist id="marcas-disponibles">
-                <option value="Ferrari">
-                <option value="DeLorean">
-                <option value="Bugatti">
-                <option value="Mercedes-Benz">
-                <option value="Chevrolet">
-                <option value="Lamborghini">
-                <option value="Toyota">
-              </datalist>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary-custom btn-lg">Enviar Formulario</button>
             </div>
+          </form>
+        </section>
 
-            <div class="form-grupo-radio">
-              <p>Condición del Vehículo:</p>
-              <input type="radio" id="condicion-nuevo" name="condicion" value="nuevo" checked>
-              <label for="condicion-nuevo">Nuevo</label>
-              <input type="radio" id="condicion-seminuevo" name="condicion" value="seminuevo">
-              <label for="condicion-seminuevo">Seminuevo</label>
-            </div>
-
-            <div class="form-grupo">
-              <label for="presupuesto">Presupuesto Aproximado (USD):</label>
-              <input type="number" id="presupuesto" name="presupuesto_max" min="10000" step="1000">
-            </div>
-
-            <div class="form-grupo-radio">
-              <p>Método de Pago Principal:</p>
-              <input type="radio" id="pago-contado" name="metodo_pago" value="contado">
-              <label for="pago-contado">Contado</label>
-              <input type="radio" id="pago-financiamiento" name="metodo_pago" value="financiamiento">
-              <label for="pago-financiamiento">Credito</label>
-            </div>
-
-            <div class="form-grupo">
-              <label for="prioridad-rendimiento">Prioridad en Rendimiento (1=Baja, 5=Alta):</label>
-              <input type="range" id="prioridad-rendimiento" name="prioridad_rendimiento" min="1" max="5" value="3">
-            </div>
-
-            <div class="form-grupo">
-              <label for="prioridad-seguridad">Prioridad en Seguridad (1=Baja, 5=Alta):</label>
-              <input type="range" id="prioridad-seguridad" name="prioridad_seguridad" min="1" max="5" value="3">
-            </div>
-
-            <div class="form-grupo">
-              <label for="prioridad-tecnologia">Prioridad en Tecnología (1=Baja, 5=Alta):</label>
-              <input type="range" id="prioridad-tecnologia" name="prioridad_tecnologia" min="1" max="5" value="3">
-            </div>
-
-            <div class="form-grupo">
-              <label for="comentarios">Comentarios Adicionales:</label>
-              <textarea id="comentarios" name="comentarios_adicionales" rows="4" cols="50"></textarea>
-            </div>
-          </fieldset>
-
-          <button type="submit" class="boton-enviar">Enviar Formulario</button>
-        </form>
-      </section>
-    </main>
+      </main>
+    </div>
   </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
